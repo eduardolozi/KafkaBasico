@@ -69,3 +69,4 @@ C:\Users\Usuario\Documents\KafkaMultiplasVersoes\App1KafkaConsumer\obj\Debug\net
 C:\Users\Usuario\Documents\KafkaMultiplasVersoes\App1KafkaConsumer\obj\Debug\net8.0\App1Kafka.Consumer.pdb
 C:\Users\Usuario\Documents\KafkaMultiplasVersoes\App1KafkaConsumer\obj\Debug\net8.0\App1Kafka.Consumer.genruntimeconfig.cache
 C:\Users\Usuario\Documents\KafkaMultiplasVersoes\App1KafkaConsumer\obj\Debug\net8.0\ref\App1Kafka.Consumer.dll
+C:\Users\Usuario\Documents\KafkaMultiplasVersoes\App1KafkaConsumer\obj\Debug\net8.0\App1Kafka.Consumer.sourcelink.json

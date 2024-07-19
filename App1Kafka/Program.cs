@@ -2,7 +2,7 @@
 using App1Kafka;
 
 var producer = new Producer();
-await producer.EnviarMensagem("Oi");
+await producer.EnviarMensagem("Esse é o Topico 1");
 await producer.EnviarMensagem("Sou o Eduardo");
 await producer.EnviarMensagem("Tenho 22 anos");
 await producer.EnviarMensagem("Sou fã de futebol");

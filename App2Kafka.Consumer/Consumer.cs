@@ -1,7 +1,7 @@
 ﻿using Confluent.Kafka;
 using Microsoft.Extensions.Hosting;
 
-namespace App1Kafka.Consumer
+namespace App2Kafka.Consumer
 {
     public class Consumer : BackgroundService
     {
@@ -12,7 +12,7 @@ namespace App1Kafka.Consumer
             _consumerConfig = new ConsumerConfig
             {
                 BootstrapServers = "localhost:9092",
-                GroupId = "GrupoApp1",
+                GroupId = "GrupoApp2",
                 AutoOffsetReset = AutoOffsetReset.Earliest
             };
             _consumer = new ConsumerBuilder<Ignore, string>(_consumerConfig).Build();
@@ -20,7 +20,7 @@ namespace App1Kafka.Consumer
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
-            _consumer.Subscribe("Topico-1");
+            _consumer.Subscribe("Topico-2");
             while (!stoppingToken.IsCancellationRequested)
             {
                 await Task.Run(() =>

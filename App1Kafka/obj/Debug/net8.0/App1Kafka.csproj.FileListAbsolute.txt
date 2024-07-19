@@ -39,3 +39,4 @@ C:\Users\Usuario\Documents\KafkaMultiplasVersoes\App1Kafka\obj\Debug\net8.0\refi
 C:\Users\Usuario\Documents\KafkaMultiplasVersoes\App1Kafka\obj\Debug\net8.0\App1Kafka.pdb
 C:\Users\Usuario\Documents\KafkaMultiplasVersoes\App1Kafka\obj\Debug\net8.0\App1Kafka.genruntimeconfig.cache
 C:\Users\Usuario\Documents\KafkaMultiplasVersoes\App1Kafka\obj\Debug\net8.0\ref\App1Kafka.dll
+C:\Users\Usuario\Documents\KafkaMultiplasVersoes\App1Kafka\obj\Debug\net8.0\App1Kafka.sourcelink.json
