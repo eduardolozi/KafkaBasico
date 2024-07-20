@@ -1,5 +1,4 @@
 ﻿using Confluent.Kafka;
-using Confluent.Kafka.Admin;
 
 namespace App1Kafka
 {

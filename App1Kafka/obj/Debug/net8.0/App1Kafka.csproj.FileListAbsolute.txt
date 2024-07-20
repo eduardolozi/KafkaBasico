@@ -33,10 +33,10 @@ C:\Users\Usuario\Documents\KafkaMultiplasVersoes\App1Kafka\obj\Debug\net8.0\App1
 C:\Users\Usuario\Documents\KafkaMultiplasVersoes\App1Kafka\obj\Debug\net8.0\App1Kafka.AssemblyInfoInputs.cache
 C:\Users\Usuario\Documents\KafkaMultiplasVersoes\App1Kafka\obj\Debug\net8.0\App1Kafka.AssemblyInfo.cs
 C:\Users\Usuario\Documents\KafkaMultiplasVersoes\App1Kafka\obj\Debug\net8.0\App1Kafka.csproj.CoreCompileInputs.cache
-C:\Users\Usuario\Documents\KafkaMultiplasVersoes\App1Kafka\obj\Debug\net8.0\App1Kafka.csproj.Up2Date
 C:\Users\Usuario\Documents\KafkaMultiplasVersoes\App1Kafka\obj\Debug\net8.0\App1Kafka.dll
 C:\Users\Usuario\Documents\KafkaMultiplasVersoes\App1Kafka\obj\Debug\net8.0\refint\App1Kafka.dll
 C:\Users\Usuario\Documents\KafkaMultiplasVersoes\App1Kafka\obj\Debug\net8.0\App1Kafka.pdb
 C:\Users\Usuario\Documents\KafkaMultiplasVersoes\App1Kafka\obj\Debug\net8.0\App1Kafka.genruntimeconfig.cache
 C:\Users\Usuario\Documents\KafkaMultiplasVersoes\App1Kafka\obj\Debug\net8.0\ref\App1Kafka.dll
 C:\Users\Usuario\Documents\KafkaMultiplasVersoes\App1Kafka\obj\Debug\net8.0\App1Kafka.sourcelink.json
+C:\Users\Usuario\Documents\KafkaMultiplasVersoes\App1Kafka\obj\Debug\net8.0\App1Kafka.csproj.CopyComplete

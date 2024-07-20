@@ -1,7 +1,7 @@
 ﻿using Confluent.Kafka;
 using Microsoft.Extensions.Hosting;
 
-namespace App2Kafka.Consumer
+namespace App2Kafka.Consumer2
 {
     public class Consumer : BackgroundService
     {
