@@ -20,14 +20,18 @@ namespace App2Kafka.Consumer2
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
-            _consumer.Subscribe("Topico-2");
-            while (!stoppingToken.IsCancellationRequested)
-            {
-                await Task.Run(() =>
+            try {
+                _consumer.Subscribe("Topico-2");
+                while (!stoppingToken.IsCancellationRequested)
                 {
-                    var result = _consumer.Consume(stoppingToken);
-                    Console.WriteLine($"Mensagem recebida: {result.Message.Value.ToString()}");
-                });
+                    await Task.Run(() =>
+                    {
+                        var result = _consumer.Consume(stoppingToken);
+                        Console.WriteLine($"Mensagem recebida: {result.Message.Value.ToString()}");
+                    });
+                }
+            } catch {
+                Console.WriteLine("Erro ao inscrever-se no tópico");
             }
         }
 

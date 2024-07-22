@@ -19,7 +19,7 @@ namespace App2Kafka
 
         public Producer()
         {
-            _config = new ProducerConfig { BootstrapServers = brokerUrl, Partitioner = Partitioner.Murmur2};
+            _config = new ProducerConfig { BootstrapServers = brokerUrl, Partitioner = Partitioner.Random};
             _adminConfig = new AdminClientConfig { BootstrapServers = brokerUrl };
             _producer = new ProducerBuilder<int, string>(_config).Build();
             _adminClient = new AdminClientBuilder(_adminConfig).Build();
@@ -42,11 +42,11 @@ namespace App2Kafka
             await _adminClient.CreateTopicsAsync(new List<TopicSpecification> { topico });
         }
 
-        public async Task EnviarMensagem(int key, string mensagem)
+        public async Task EnviarMensagem(string mensagem)
         {
             try
             {
-                await _producer.ProduceAsync(topico.Name, new Message<int, string> {Key = key, Value = mensagem });
+                await _producer.ProduceAsync(topico.Name, new Message<int, string> {Value = mensagem });
                 Console.WriteLine($"Mensagem enviada: {mensagem}");
             }
             catch (Exception ex)
