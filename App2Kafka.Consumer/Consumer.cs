@@ -18,6 +18,11 @@ namespace App2Kafka.Consumer
             _consumer = new ConsumerBuilder<Ignore, string>(_consumerConfig).Build();
         }
 
+        private void BalanceiaTopicoSemConsumer()
+        {
+            _consumer.Subscribe(new List<string> { "Topico-2", "Topico-2V2"});
+        }
+
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
             try {
@@ -27,6 +32,11 @@ namespace App2Kafka.Consumer
                     await Task.Run(() =>
                     {
                         var result = _consumer.Consume(stoppingToken);
+                        if (result.Message.Value.ToString() == "Topico App2V2 perdeu um ou mais consumers")
+                        {
+                            BalanceiaTopicoSemConsumer();
+                            return;
+                        }
                         Console.WriteLine($"Mensagem recebida: {result.Message.Value.ToString()}");
                     });
                 }

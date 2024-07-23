@@ -23,13 +23,26 @@ namespace App2Kafka
             _adminConfig = new AdminClientConfig { BootstrapServers = brokerUrl };
             _producer = new ProducerBuilder<int, string>(_config).Build();
             _adminClient = new AdminClientBuilder(_adminConfig).Build();
-            
+        }
+        
+        private async Task<int> NumeroDeConsumersNoTopico()
+        {
+            var grupos = new List<string> {"GrupoApp2V2"};
+            var descricaoConsumerGroup = await _adminClient.DescribeConsumerGroupsAsync(grupos);
+            return descricaoConsumerGroup.ConsumerGroupDescriptions[0].Members.Count;
+        }
+
+        public async Task BalanceiaTopicoSemConsumer()
+        {
+            var consumers = await NumeroDeConsumersNoTopico();
+            if (consumers > 1) return;
+            await EnviarMensagem("Topico App2V2 perdeu um ou mais consumers");
         }
 
         private bool ServidorJaExiste()
         {
-            var metadataTopico = _adminClient.GetMetadata(TimeSpan.FromSeconds(15));
-            var topicoNoBroker = metadataTopico
+            var metadataClientKafka = _adminClient.GetMetadata(TimeSpan.FromSeconds(15));
+            var topicoNoBroker = metadataClientKafka
                                 .Topics
                                 .FirstOrDefault(x => x.Topic == topico.Name);
             return topicoNoBroker is not null;

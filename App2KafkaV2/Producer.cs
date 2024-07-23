@@ -28,8 +28,8 @@ namespace App2KafkaV2
 
         private bool ServidorJaExiste()
         {
-            var metadataTopico = _adminClient.GetMetadata(TimeSpan.FromSeconds(15));
-            var topicoNoBroker = metadataTopico
+            var metadataClientKafka = _adminClient.GetMetadata(TimeSpan.FromSeconds(15));
+            var topicoNoBroker = metadataClientKafka
                                 .Topics
                                 .FirstOrDefault(x => x.Topic == topico.Name);
             return topicoNoBroker is not null;
