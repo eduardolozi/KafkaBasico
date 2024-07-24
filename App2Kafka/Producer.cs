@@ -27,7 +27,7 @@ namespace App2Kafka
         
         private async Task<int> NumeroDeConsumersNoTopico()
         {
-            var grupos = new List<string> {"GrupoApp2V2"};
+            var grupos = new List<string> {"GrupoApp2"};
             var descricaoConsumerGroup = await _adminClient.DescribeConsumerGroupsAsync(grupos);
             return descricaoConsumerGroup.ConsumerGroupDescriptions[0].Members.Count;
         }

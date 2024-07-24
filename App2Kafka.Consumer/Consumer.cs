@@ -40,8 +40,7 @@ namespace App2Kafka.Consumer
                         Console.WriteLine($"Mensagem recebida: {result.Message.Value.ToString()}");
                     });
                 }
-            } catch{
-                Console.WriteLine("Erro ao inscrever-se no tópico");
+            } catch(Exception e){
             }
         }
 
